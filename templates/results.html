@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reconocimiento de Imágenes</title>
+</head>
+<body>
+    <h1>Resultados de la detección de objetos</h1>
+    {% if objects %}
+    <ul>
+        {% for obj in objects %}
+        <li>{{ obj.name }} ({{ obj.confidence }})</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No se encontraron objetos en la imagen.</p>
+    {% endif %}
+</body>
+</html>
